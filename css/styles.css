@@ -1,0 +1,292 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: white;
+}
+li {
+	list-style: none;
+	display: block;
+	}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.lightbox {
+	width: 100%;
+	margin: 50px auto;
+}
+.search {
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	height: 50px;
+}
+.search {
+	display: none;
+}
+input {
+	margin-top: 5px;
+	margin-bottom: 25px;
+	width: 100%;
+	font-size: 16px;
+  	font-weight: 300; 
+  	height: 40px;
+  	border-radius: .3em;
+  	border: 3px solid #e5e5e5;
+	padding-left: 10px;
+}
+.lightbox img {
+	width: 250px;
+	height: 250px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	outline: 0;
+	border-bottom: 3px solid rgba(0,0,0, 0.05);
+ 	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	border-radius: .3em;
+	
+}
+
+/*Javascript Gallery Css */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.overlay img {
+  margin-top: 10%;
+  height: 225px;
+  width: 85%;
+}
+.overlay p {
+	margin-top: 25px;
+	color: white;
+	font-size: .8em;
+}
+.close {
+	position: absolute;
+	font-size: 15px;
+	color: white;
+	top: 10px;
+	right: 2px;
+	cursor: pointer;
+}
+.close:before {
+	content: "X";
+}
+
+.prev,
+.next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 265px;
+    display: block;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    color: transparent;
+    border: transparent;
+    outline: none;
+    background: transparent;
+   	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.prev
+{
+	
+    left: -25px;
+	}
+
+.prev:before
+{
+    content: '←';
+    font-size: 20px;
+ 	color: white;
+}
+.next
+{
+    right: -25px;
+}
+
+.next:before
+{
+  content: '→';
+  font-size: 20px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+	li {
+		display: inline-block;
+	}
+	input {
+		margin-top: 25px;
+		width: 468px;
+	}
+	.container {
+		width: 720px;
+	}
+	.lightbox {
+	width: 720px;
+	margin: 50px auto;
+	}
+	.lightbox img {
+		width: 150px;
+		height: 150px;
+		margin: 30px;
+	}
+	.search {
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	height: 80px;
+	width: 720px;
+}
+
+/*Javascript Gallery Css */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.overlay img {
+  margin-top: 3%;
+  height: 400px;
+  width: 640px;
+}
+.overlay p {
+	position: block;
+  margin: 25px auto;	
+  color: white;
+  width: 600px;
+  text-align: center;
+  font-size: .9em;
+}
+.prev,
+.next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 240px;
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: transparent;
+    outline: none;
+    background: transparent;
+   	font-family: 'Open Sans Condensed', sans-serif;
+
+
+}
+
+.prev
+{
+    left: 0;
+}
+[dir='rtl'] .prev
+{
+    right: -25px;
+    left: auto;
+}
+.prev:before
+{
+    content: '<';
+    font-size: 60px;
+ 	color: white;
+}
+[dir='rtl'] .prev:before
+{
+    content: '→';
+}
+
+.next
+{
+    right: 0;
+	
+
+}
+[dir='rtl'] .next
+{
+    right: auto;
+    left: -25px;
+}
+.next:before
+{
+  content: '>';
+  font-size: 60px;
+  color: white;
+}
+[dir='rtl'] .next:before
+{
+    content: '←';
+}
+}
+	
+@media (min-width: 968px) {
+	.container {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.lightbox {
+	width: 960px;
+	margin: 50px auto;
+}
+.search {
+	width: 100%;
+}
+
+.lightbox img {
+	width: 200px;
+	height: 200px;
+	margin: 30px;
+}
+.overlay img {
+  margin-top: 3%;
+  height: 600px;
+  width: 980px;
+}
+.prev,
+.next {
+	top: 350px;
+}
+.close {
+	position: absolute;
+	font-size: 20px;
+	color: white;
+	top: 25px;
+	right: 25px;
+	cursor: pointer;
+}
+.close:before {
+	content: "X";
+}
+
+}
